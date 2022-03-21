@@ -6,6 +6,8 @@ fun main(){
     //typeOfCard = "Visa"
     //typeOfCard = "MasterCard"
 
+    //
+
     val sumFee = getSumOfFee(sumNow, sumPast, typeOfCard)
     if (sumFee < 0) {
         println("Превышены лимиты переводов")
