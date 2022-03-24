@@ -28,5 +28,31 @@ class MainKtTest {
         assertEquals(0, res)
     }
 
+    @Test
+    fun `test getSumOfFee 0 0`() {
+        val res = getSumOfFee(0, 0,  "")
+        assertEquals(2000, res)
+    }
+
+    @Test
+    fun `test getSumOfFee 1 0 mir`() {
+        val res = getSumOfFee(1, 0,  "Mir")
+        assertEquals(2000, res)
+    }
+
+    @Test
+    fun `test getSumOfFee month 999 999 самый важный тест`() {
+        val res = getSumOfFee(990, 990,  "Union pay")
+        assertEquals(2000, res)
+    }
+
+    @Test
+    fun `test getSumOfFee month 999 999 самый важный тест2`() {
+        val res = getSumOfFee(0,0 , "adf" )
+        assertEquals(2000, res)
+    }
+
+
+
 
 }
