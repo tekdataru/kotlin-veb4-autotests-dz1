@@ -11,6 +11,22 @@ class MainKtTest {
     }
 
     @Test
-    fun main() {
+    fun `test getSumOfFee Visa`() {
+        val res = getSumOfFee(250, 100,  "Visa")
+        assertEquals(3500, res)
     }
+
+    @Test
+    fun `test getSumOfFee Mastercard`() {
+        val res = getSumOfFee(250, 100,  "Mastercard")
+        assertEquals(2000, res)
+    }
+
+    @Test
+    fun `test getSumOfFee month limit more than 100 k`() {
+        val res = getSumOfFee(250, 100000,  "Mastercard")
+        assertEquals(0, res)
+    }
+
+
 }
