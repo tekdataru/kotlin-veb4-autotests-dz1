@@ -39,6 +39,17 @@ class MainKtTest {
         val res = getSumOfFee(5000, 3000)
         assertEquals(0, res)
     }
+    @Test
+    fun `test getSumOfFee 5000 empty empty`() {
+        val res = getSumOfFee(5000)
+        assertEquals(0, res)
+    }
+
+    @Test
+    fun `test getSumOfFee 5000 empty "Visa"`() {
+        val res = getSumOfFee(5000, typeOfCard = "Visa")
+        assertEquals(5000, res)
+    }
 
     @Test
     fun `test getSumOfFee 1 0 mir`() {
